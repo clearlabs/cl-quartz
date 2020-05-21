@@ -535,7 +535,6 @@ public class QuartzSchedulerThread extends Thread {
         if (System.getProperty(TIME_OFFSET) != null) {
             try {
                 offset = Long.parseLong(System.getProperty(TIME_OFFSET));
-                log.warn("Applying OFFSET of: {}", offset);
             } catch (NumberFormatException nfe) {
                 log.error("Could not parse OFFSET: {}", System.getProperty(TIME_OFFSET));
             }
